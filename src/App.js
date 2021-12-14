@@ -2,17 +2,7 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Homepage from './pages/homepage/homepage.component'; 
-
-const HatsPage= props =>{
-  console.log(props);
-  return (
-    <div>
-      <h1>Hats page</h1>
-    </div>
-  )
-}
-
-
+import ShopPage from './pages/shop/shop.component';
 
 
 function App() {
@@ -22,8 +12,8 @@ function App() {
           <Route exact path="/">
             <Homepage />
           </Route>
-          <Route path="/shop/hats">
-            <HatsPage />
+          <Route path="/shop">
+            <ShopPage/>
           </Route>
           <Route path="*">
           <Homepage />
